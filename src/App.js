@@ -50,9 +50,7 @@ class App extends Component {
         {
           name: `Fizz Buzz`,
           instructions: `Write a program that console logs the numbers from 1 to n. But for multiples of three print “fizz” instead of the number and for the multiples of five print “buzz”. For numbers which are multiples of both three and five print “fizzbuzz”`,
-          examples: [
-            `fizzBuzz(5); ==>1 ==>2 ==>fizz ==>4 ==>buzz`
-          ]
+          examples: [`fizzBuzz(5); ==>1 ==>2 ==>fizz ==>4 ==>buzz`]
         },
         {
           name: `Chunk`,
@@ -66,8 +64,9 @@ class App extends Component {
           ]
         }
       ],
+      randomQuestions: [],
       bankClicked: false,
-      randomClicked: false,
+      randomClicked: false
     };
   }
 
@@ -78,10 +77,28 @@ class App extends Component {
   };
 
   handleRandomClick = () => {
+    const questions = this.state.algos.length;
+    const randomNumArr = [];
+    while (randomNumArr.length < 5) {
+      let randomnumber = Math.floor(Math.random() * questions);
+      if (randomNumArr.indexOf(randomnumber) > -1) continue;
+      randomNumArr[randomNumArr.length] = randomnumber;
+    }
+    console.log(randomNumArr)
+
+    const questionBank = this.state.algos;
+    const randomQuestions = [];
+
+    for(let randomNum of randomNumArr) {
+      randomQuestions.push(questionBank[randomNum])
+    }
+
+    console.log(randomQuestions)
     this.setState({
+      randomQuestions: randomQuestions,
       randomClicked: !this.state.randomClicked
     });
-  }
+  };
 
   render() {
     return (
@@ -91,8 +108,11 @@ class App extends Component {
         </header>
         <button onClick={this.handleBankClick}>Bank</button>
         <button onClick={this.handleRandomClick}>Today's Questions</button>
-        <Bank bankClicked={this.state.bankClicked} algos={this.state.algos}/>
-        <RandomQuestions randomClicked={this.state.randomClicked} algos={this.state.algos}/>
+        <Bank bankClicked={this.state.bankClicked} algos={this.state.algos} />
+        <RandomQuestions
+          randomClicked={this.state.randomClicked}
+          randomQuestions={this.state.randomQuestions}
+        />
       </div>
     );
   }
