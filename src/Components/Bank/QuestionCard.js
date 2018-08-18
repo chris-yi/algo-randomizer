@@ -1,18 +1,37 @@
-import React from "react";
+import React, { Component } from "react";
 import QuestionDetail from "./QuestionDetail";
 
-function QuestionCard(props) {
-  const { name, instructions, examples } = props;
-  return (
-    <div>
-      <p>{name}</p>
-      <QuestionDetail
-        name={name}
-        instructions={instructions}
-        examples={examples}
-      />
-    </div>
-  );
+class QuestionCard extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+        detailClicked: false
+    };
+  }
+
+  handleClick = () => {
+    this.setState({
+        detailClicked: !this.state.detailClicked
+    })
+  }
+
+  render() {
+      console.log(this.state.detailClicked)
+    const { name, instructions, examples } = this.props;
+    return (
+      <div>
+        <p>{name}</p>
+        <button onClick={this.handleClick}>Details</button>
+        <QuestionDetail
+          name={name}
+          instructions={instructions}
+          examples={examples}
+          show={this.state.detailClicked}
+        />
+      </div>
+    );
+  }
 }
 
 export default QuestionCard;
