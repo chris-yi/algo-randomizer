@@ -2,17 +2,17 @@ import React from "react";
 import QuestionCard from "./QuestionCard";
 
 function Questions(props) {
-  console.log(props);
-  const questions = props.questions.map((question, index) => (
+  const {bankClicked , questions} = props;
+  const renderQuestions = bankClicked ? questions.map((question, index) => (
     <QuestionCard
       key={index}
       name={question.name}
       instructions={question.instructions}
       examples={question.examples}
     />
-  ));
+  )) : null;
 
-  return <div>{questions}</div>;
+  return <div>{renderQuestions}</div>;
 }
 
 export default Questions;

@@ -6,18 +6,17 @@ class QuestionCard extends Component {
     super();
 
     this.state = {
-        detailClicked: false
+      detailClicked: false
     };
   }
 
   handleClick = () => {
     this.setState({
-        detailClicked: !this.state.detailClicked
-    })
-  }
+      detailClicked: !this.state.detailClicked
+    });
+  };
 
   render() {
-      console.log(this.state.detailClicked)
     const { name, instructions, examples } = this.props;
     return (
       <div>

@@ -3,15 +3,15 @@ import React from "react";
 function questionDetail(props) {
   const { instructions, examples, show } = props;
   const example = examples.map((example, index) => (
-    <div key={index}>{example}</div>
+    <div key={index}>Example {index + 1}: {example}</div>
   ));
-  const render = show ? (
+  const displayDetails = show ? (
     <div>
-      <p>{instructions}</p>
+      <p>Instructions: {instructions}</p>
       {example}
     </div>
   ) : null;
-  return <div>{render}</div>;
+  return <div>{displayDetails}</div>;
 }
 
 export default questionDetail;

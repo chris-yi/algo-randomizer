@@ -60,11 +60,14 @@ class Bank extends Component {
             `chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]`
           ]
         }
-      ]
+      ],
     };
   }
+
+
+
   render() {
-    return <Questions questions={this.state.algos} />;
+    return <Questions questions={this.state.algos} bankClicked={this.props.bankClicked}/>;
   }
 }
 

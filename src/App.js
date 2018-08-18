@@ -1,14 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 import Bank from "./Components/Bank/Bank";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    
+
+    this.state = {
+      bankClicked: false
+    };
   }
+
+  handleBankClick = () => {
+    this.setState({
+      bankClicked: !this.state.bankClicked
+    });
+  };
 
   render() {
     return (
@@ -16,9 +25,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Welcome Back</h1>
         </header>
-        <button>Bank</button>
+        <button onClick={this.handleBankClick}>Bank</button>
         <button>Today's Questions</button>
-        <Bank/>
+        <Bank bankClicked={this.state.bankClicked} />
       </div>
     );
   }
