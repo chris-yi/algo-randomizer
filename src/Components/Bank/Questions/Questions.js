@@ -1,5 +1,6 @@
 import React from "react";
-import QuestionCard from "./QuestionCard";
+import QuestionCard from "./../QuestionCard/QuestionCard";
+import "./Questions.css"
 
 function Questions(props) {
   const {bankClicked , questions, randomClicked} = props;
@@ -12,7 +13,7 @@ function Questions(props) {
     />
   )) : null;
 
-  return <div>{renderQuestions}</div>;
+  return <div className="Questions-Container">{renderQuestions}</div>;
 }
 
 export default Questions;

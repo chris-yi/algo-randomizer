@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import QuestionDetail from "./QuestionDetail";
+import QuestionDetail from "./../QuestionDetail/QuestionDetail";
+import "./QuestionCard.css";
 
 class QuestionCard extends Component {
   constructor() {
@@ -19,7 +20,7 @@ class QuestionCard extends Component {
   render() {
     const { name, instructions, examples } = this.props;
     return (
-      <div>
+      <div className="question-card-container">
         <p>{name}</p>
         <button onClick={this.handleClick}>Details</button>
         <QuestionDetail

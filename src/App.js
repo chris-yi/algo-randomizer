@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-
 import Bank from "./Components/Bank/Bank";
 import RandomQuestions from "./Components/RandomQuestions/RandomQuestions";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -72,7 +70,10 @@ class App extends Component {
 
   handleBankClick = () => {
     this.setState({
-      bankClicked: !this.state.bankClicked
+      bankClicked:
+        this.state.randomClicked === false && this.state.bankClicked === false
+          ? true
+          : false
     });
   };
 
@@ -84,19 +85,20 @@ class App extends Component {
       if (randomNumArr.indexOf(randomnumber) > -1) continue;
       randomNumArr[randomNumArr.length] = randomnumber;
     }
-    console.log(randomNumArr)
 
     const questionBank = this.state.algos;
     const randomQuestions = [];
 
-    for(let randomNum of randomNumArr) {
-      randomQuestions.push(questionBank[randomNum])
+    for (let randomNum of randomNumArr) {
+      randomQuestions.push(questionBank[randomNum]);
     }
 
-    console.log(randomQuestions)
     this.setState({
       randomQuestions: randomQuestions,
-      randomClicked: !this.state.randomClicked
+      randomClicked:
+        this.state.randomClicked === false && this.state.bankClicked === false
+          ? true
+          : false
     });
   };
 
@@ -104,15 +106,20 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome Back</h1>
+          <h1 className="App-title">Algo Randomizer</h1>
         </header>
-        <button onClick={this.handleBankClick}>Bank</button>
-        <button onClick={this.handleRandomClick}>Today's Questions</button>
-        <Bank bankClicked={this.state.bankClicked} algos={this.state.algos} />
-        <RandomQuestions
-          randomClicked={this.state.randomClicked}
-          randomQuestions={this.state.randomQuestions}
-        />
+        <div className="button-container">
+          <button onClick={this.handleBankClick}>Bank</button>
+          <button onClick={this.handleRandomClick}>Today's Questions</button>
+        </div>
+
+        <div className="main-content-container">
+          <Bank bankClicked={this.state.bankClicked} algos={this.state.algos} />
+          <RandomQuestions
+            randomClicked={this.state.randomClicked}
+            randomQuestions={this.state.randomQuestions}
+          />
+        </div>
       </div>
     );
   }

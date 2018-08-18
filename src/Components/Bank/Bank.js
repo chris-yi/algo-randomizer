@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Questions from "./Questions";
+import Questions from "./Questions/Questions";
+import "./Bank.css"
 
 class Bank extends Component {
   constructor() {
@@ -9,7 +10,11 @@ class Bank extends Component {
   }
 
   render() {
-    return <Questions questions={this.props.algos} bankClicked={this.props.bankClicked}/>;
+    return (
+      <div className="Bank-Container">
+          <Questions questions={this.props.algos} bankClicked={this.props.bankClicked}/>
+      </div>
+    )
   }
 }
 
