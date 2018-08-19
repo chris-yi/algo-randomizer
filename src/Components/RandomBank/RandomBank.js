@@ -2,9 +2,15 @@ import React from 'react';
 import RandomQuestions from './RandomQuestions/RandomQuestions';
 
 function RandomBank(props) {
-  const { randomQuestions, randomClicked } = props;
+  const { randomQuestions, randomClicked, refresh } = props;
   return (
-    <RandomQuestions questions={randomQuestions} randomClicked={randomClicked} />
+    <div>
+      <RandomQuestions
+        questions={randomQuestions}
+        randomClicked={randomClicked}
+        refresh={refresh}
+      />
+    </div>
   );
 }
 

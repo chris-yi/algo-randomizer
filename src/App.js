@@ -36,8 +36,7 @@ class App extends Component {
           name: 'Reverse Integer',
           instructions:
             'Given an integer, return an integer that is the reverse ordering of numbers.',
-          image:
-            'https://i.ytimg.com/vi/okaofXuNVcQ/maxresdefault.jpg',
+          image: 'https://i.ytimg.com/vi/okaofXuNVcQ/maxresdefault.jpg',
           examples: [
             'reverseInt(15) === 51',
             'reverseInt(981) === 189',
@@ -86,16 +85,8 @@ class App extends Component {
     };
   }
 
-  handleBankClick = () => {
-    const { randomClicked, bankClicked } = this.state;
-    this.setState({
-      bankClicked: true,
-      randomClicked: false
-    });
-  };
-
-  handleRandomClick = () => {
-    const { algos, randomClicked, bankClicked } = this.state;
+  componentDidMount() {
+    const { algos } = this.state;
     const questions = algos.length;
     const randomNumArr = [];
     while (randomNumArr.length < 5) {
@@ -107,16 +98,47 @@ class App extends Component {
     const questionBank = algos;
     const randomQuestions = [];
 
-    randomNumArr.forEach(randomNum =>
-      randomQuestions.push(questionBank[randomNum])
-    );
+    randomNumArr.forEach(randomNum => randomQuestions.push(questionBank[randomNum]));
 
     this.setState({
       randomQuestions,
+    });
+  }
+
+  handleBankClick = () => {
+    this.setState({
+      bankClicked: true,
+      randomClicked: false
+    });
+  };
+
+  handleRandomClick = () => {
+    this.setState({
+
       randomClicked: true,
       bankClicked: false
     });
   };
+
+  handleRefresh = () => {
+    const { algos } = this.state;
+    const questions = algos.length;
+    const randomNumArr = [];
+    while (randomNumArr.length < 5) {
+      const randomnumber = Math.floor(Math.random() * questions);
+      if (randomNumArr.indexOf(randomnumber) > -1) continue;
+      randomNumArr[randomNumArr.length] = randomnumber;
+    }
+
+    const questionBank = algos;
+    const randomQuestions = [];
+
+    randomNumArr.forEach(randomNum => randomQuestions.push(questionBank[randomNum]));
+
+    this.setState({
+      randomQuestions,
+    });
+  }
 
   render() {
     const { bankClicked, algos, randomClicked, randomQuestions } = this.state;
@@ -164,6 +186,7 @@ class App extends Component {
           <RandomBank
             randomClicked={randomClicked}
             randomQuestions={randomQuestions}
+            refresh={this.handleRefresh}
           />
         </div>
       </div>
