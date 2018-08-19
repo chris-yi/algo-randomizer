@@ -1,5 +1,6 @@
 import React from 'react';
 import RandomQuestionCard from '../RandomQuestionCard/RandomQuestionCard';
+import "./RandomQuestions.css"
 
 function RandomQuestions(props) {
   const { bankClicked, questions, randomClicked } = props;
@@ -11,11 +12,12 @@ function RandomQuestions(props) {
           name={question.name}
           instructions={question.instructions}
           examples={question.examples}
+          image={question.image}
         />
       ))
       : null;
 
-  return <div className="Questions-Container">{renderQuestions}</div>;
+  return <div className="Random-Questions-Container">{renderQuestions}</div>;
 }
 
 export default RandomQuestions;

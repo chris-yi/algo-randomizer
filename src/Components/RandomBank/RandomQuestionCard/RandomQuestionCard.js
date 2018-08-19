@@ -20,14 +20,14 @@ class RandomQuestionCard extends Component {
 
   render() {
     const { isFlipped } = this.state;
-    const { name, instructions, examples } = this.props;
+    const { name, instructions, examples, image } = this.props;
     return (
       <div
         className="random-question-card-container"
         onClick={this.handleClick}
       >
         <ReactCardFlip isFlipped={isFlipped}>
-          <RandomFront key="front" name={name}/>
+          <RandomFront key="front" name={name} image={image}/>
           <RandomBack
             key="back"
             instructions={instructions}

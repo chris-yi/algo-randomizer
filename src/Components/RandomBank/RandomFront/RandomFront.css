@@ -1,7 +1,45 @@
 .random-front-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #FBFBFB;
     color: #393534;
     height: 300px;
     border-radius: 2px;
     box-shadow: 2px 8px 8px 3px rgba(242,242,242,1);
+}
+
+.front-img-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.question-status-front {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background-color: #F18432;
+    border-radius: 50%;
+    left: 116px;
+    top: 10px;
+}
+
+.card-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.random-front-title {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.random-front-container p {
+    font-size: 10px;
+    font-weight: 300;
+    color: #BCBFCB;
 }
