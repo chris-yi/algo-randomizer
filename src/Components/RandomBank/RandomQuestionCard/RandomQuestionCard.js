@@ -27,7 +27,7 @@ class RandomQuestionCard extends Component {
         onClick={this.handleClick}
       >
         <ReactCardFlip isFlipped={isFlipped}>
-          <RandomFront key="front" name={name} />
+          <RandomFront key="front" name={name}/>
           <RandomBack
             key="back"
             instructions={instructions}
