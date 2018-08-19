@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Bank from './Components/Bank/Bank';
-import RandomQuestions from './Components/RandomQuestions/RandomQuestions';
+import RandomBank from './Components/RandomBank/RandomBank';
 import './App.css';
 
 class App extends Component {
@@ -123,7 +123,7 @@ class App extends Component {
 
         <div className="main-content-container">
           <Bank bankClicked={bankClicked} algos={algos} />
-          <RandomQuestions
+          <RandomBank
             randomClicked={randomClicked}
             randomQuestions={randomQuestions}
           />
