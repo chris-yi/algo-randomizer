@@ -77,8 +77,8 @@ class App extends Component {
   handleBankClick = () => {
     const { randomClicked, bankClicked } = this.state;
     this.setState({
-      bankClicked:
-        (randomClicked === false && bankClicked === false)
+      bankClicked: true,
+      randomClicked: false
     });
   };
 
@@ -95,12 +95,14 @@ class App extends Component {
     const questionBank = algos;
     const randomQuestions = [];
 
-    randomNumArr.forEach(randomNum => randomQuestions.push(questionBank[randomNum]));
+    randomNumArr.forEach(randomNum =>
+      randomQuestions.push(questionBank[randomNum])
+    );
 
     this.setState({
       randomQuestions,
-      randomClicked:
-        (randomClicked === false && bankClicked === false)
+      randomClicked: true,
+      bankClicked: false
     });
   };
 
@@ -110,16 +112,30 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Algo Randomizer</h1>
+          <div className="header-left-container">
+            <h1 className="App-title">Algo Randomizer</h1>
+            <div className="title-search"><i className="fas fa-search" /></div>
+          </div>
+          <div className="user-profile-container">
+            <img src="https://lh5.googleusercontent.com/-UQ-2juJtDOU/AAAAAAAAAAI/AAAAAAAAAMk/lornBKtJ-wI/photo.jpg" alt="user-profile-pic" className="user-profile-pic"/>
+          </div>
         </header>
-        <div className="button-container">
-          <button type="button" onClick={this.handleBankClick}>
-            Bank
-          </button>
-          <button type="button" onClick={this.handleRandomClick}>
-            Today's Questions
-          </button>
-        </div>
+        <nav className="nav-container">
+          <div className="button-container">
+            <div
+              className={`${this.state.bankClicked ? 'selected' : ''} nav-button`}
+              onClick={this.handleBankClick}
+            >
+              <p>Bank</p>
+            </div>
+            <div
+              className={`${this.state.randomClicked ? 'selected' : ''} nav-button`}
+              onClick={this.handleRandomClick}
+            >
+              <p>Daily Random</p>
+            </div>
+          </div>
+        </nav>
 
         <div className="main-content-container">
           <Bank bankClicked={bankClicked} algos={algos} />

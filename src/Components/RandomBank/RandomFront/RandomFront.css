@@ -1,4 +1,7 @@
 .random-front-container {
-    background-color: green;
+    background-color: #FBFBFB;
+    color: #393534;
     height: 300px;
+    border-radius: 2px;
+    box-shadow: 2px 8px 8px 3px rgba(242,242,242,1);
 }
