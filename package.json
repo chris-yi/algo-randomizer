@@ -5,6 +5,7 @@
   "dependencies": {
     "ajv": "^6.5.3",
     "eslint-config-react-app": "^2.1.0",
+    "rc-progress": "^2.2.5",
     "react": "^16.4.2",
     "react-card-flip": "^0.2.1",
     "react-dom": "^16.4.2",

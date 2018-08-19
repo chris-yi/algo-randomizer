@@ -14,7 +14,7 @@ class App extends Component {
           instructions:
             'Given a string, return a new string with the reversed order of characters',
           image:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2Kwsx0J4b9S4JP4CiWYfCdDaJgLxv93zFCGTw6fm2Nzi2dJf',
+            'https://cdn-images-1.medium.com/max/1600/1*NyNysRVRPQxjKF8yhYUHeg.jpeg',
           examples: [
             'reverse("apple") === "leppa"',
             'reverse("hello") === "olleh"',
