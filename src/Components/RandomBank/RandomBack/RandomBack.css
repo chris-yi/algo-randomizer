@@ -3,5 +3,17 @@
     color: #393534;
     height: 300px;
     border-radius: 2px;
-    box-shadow: 2px 8px 8px 3px rgba(242,242,242,1);
+    box-shadow: 2px 8px 8px 3px rgba(232,232,232,1);
+}
+
+.random-back-container p {
+    font-size: 13px;
+}
+
+.instructions {
+    padding: 30px 12px 12px 12px;
+}
+
+.examples {
+    padding: 12px 12px 0 12px;
 }
