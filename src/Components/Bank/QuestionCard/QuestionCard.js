@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import QuestionDetail from "./../QuestionDetail/QuestionDetail";
-import "./QuestionCard.css";
+import React, { Component } from 'react';
+import QuestionDetail from '../QuestionDetail/QuestionDetail';
+import './QuestionCard.css';
 
 class QuestionCard extends Component {
   constructor() {
@@ -12,22 +12,25 @@ class QuestionCard extends Component {
   }
 
   handleClick = () => {
-    this.setState({
-      detailClicked: !this.state.detailClicked
-    });
+    this.setState(prevState => ({
+      detailClicked: !prevState.detailClicked
+    }));
   };
 
   render() {
     const { name, instructions, examples } = this.props;
+    const { detailClicked } = this.state;
     return (
       <div className="question-card-container">
         <p>{name}</p>
-        <button onClick={this.handleClick}>Details</button>
+        <button type="button" onClick={this.handleClick}>
+          Details
+        </button>
         <QuestionDetail
           name={name}
           instructions={instructions}
           examples={examples}
-          show={this.state.detailClicked}
+          show={detailClicked}
         />
       </div>
     );

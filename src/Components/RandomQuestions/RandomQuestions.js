@@ -1,8 +1,11 @@
-import React from "react";
-import Questions from "../Bank/Questions/Questions";
+import React from 'react';
+import Questions from '../Bank/Questions/Questions';
 
 function RandomQuestions(props) {
-  return <Questions questions={props.randomQuestions} randomClicked={props.randomClicked}/>
+  const { randomQuestions, randomClicked } = props;
+  return (
+    <Questions questions={randomQuestions} randomClicked={randomClicked} />
+  );
 }
 
 export default RandomQuestions;

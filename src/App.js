@@ -78,7 +78,7 @@ class App extends Component {
     const { randomClicked, bankClicked } = this.state;
     this.setState({
       bankClicked:
-        randomClicked === false && bankClicked === false ? true : false
+        (randomClicked === false && bankClicked === false)
     });
   };
 
@@ -95,14 +95,12 @@ class App extends Component {
     const questionBank = algos;
     const randomQuestions = [];
 
-    for (let randomNum of randomNumArr) {
-      randomQuestions.push(questionBank[randomNum]);
-    }
+    randomNumArr.forEach(randomNum => randomQuestions.push(questionBank[randomNum]));
 
     this.setState({
       randomQuestions,
       randomClicked:
-        randomClicked === false && bankClicked === false ? true : false
+        (randomClicked === false && bankClicked === false)
     });
   };
 

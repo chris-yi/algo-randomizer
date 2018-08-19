@@ -1,21 +1,15 @@
-import React, { Component } from "react";
-import Questions from "./Questions/Questions";
-import "./Bank.css"
+import React from 'react';
+import Questions from './Questions/Questions';
+import './Bank.css';
 
-class Bank extends Component {
-  constructor() {
-    super();
-    this.state = {
-    };
-  }
+function Bank(props) {
+  const { algos, bankClicked } = props;
 
-  render() {
-    return (
-      <div className="Bank-Container">
-          <Questions questions={this.props.algos} bankClicked={this.props.bankClicked}/>
-      </div>
-    )
-  }
+  return (
+    <div className="Bank-Container">
+      <Questions questions={algos} bankClicked={bankClicked} />
+    </div>
+  );
 }
 
 export default Bank;
