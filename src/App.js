@@ -101,7 +101,7 @@ class App extends Component {
     const { algos } = this.state;
     const questions = algos.length;
     const randomNumArr = [];
-    while (randomNumArr.length < 5) {
+    while (randomNumArr.length < 6) {
       const randomnumber = Math.floor(Math.random() * questions);
       if (randomNumArr.indexOf(randomnumber) > -1) continue;
       randomNumArr[randomNumArr.length] = randomnumber;
@@ -137,7 +137,7 @@ class App extends Component {
     const { algos } = this.state;
     const questions = algos.length;
     const randomNumArr = [];
-    while (randomNumArr.length < 5) {
+    while (randomNumArr.length < 6) {
       const randomnumber = Math.floor(Math.random() * questions);
       if (randomNumArr.indexOf(randomnumber) > -1) continue;
       randomNumArr[randomNumArr.length] = randomnumber;
