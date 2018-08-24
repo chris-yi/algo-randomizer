@@ -77,6 +77,18 @@ class App extends Component {
             'chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]',
             'chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]'
           ]
+        },
+        {
+          name: 'Anagrams',
+          instructions:
+            'Check to see if two provided strings are anagrams of eachother. One string is an anagram of another if it uses the same characters in the same quantity. Only consider characters, not spaces or punctuation.  Consider capital letters to be the same as lower case',
+          image:
+            'https://cdn-images-1.medium.com/max/641/1*Dc5MaOQoPnHMp0XQzRfh8A.png',
+          examples: [
+            'anagrams("rail safety", "fairy tales") --> True',
+            'anagrams("RAIL! SAFETY!", "fairy tales") --> True',
+            'anagrams("Hi there", "Bye there") --> False'
+          ]
         }
       ],
       randomQuestions: [],
@@ -98,10 +110,12 @@ class App extends Component {
     const questionBank = algos;
     const randomQuestions = [];
 
-    randomNumArr.forEach(randomNum => randomQuestions.push(questionBank[randomNum]));
+    randomNumArr.forEach(randomNum =>
+      randomQuestions.push(questionBank[randomNum])
+    );
 
     this.setState({
-      randomQuestions,
+      randomQuestions
     });
   }
 
@@ -114,7 +128,6 @@ class App extends Component {
 
   handleRandomClick = () => {
     this.setState({
-
       randomClicked: true,
       bankClicked: false
     });
@@ -133,12 +146,14 @@ class App extends Component {
     const questionBank = algos;
     const randomQuestions = [];
 
-    randomNumArr.forEach(randomNum => randomQuestions.push(questionBank[randomNum]));
+    randomNumArr.forEach(randomNum =>
+      randomQuestions.push(questionBank[randomNum])
+    );
 
     this.setState({
-      randomQuestions,
+      randomQuestions
     });
-  }
+  };
 
   render() {
     const { bankClicked, algos, randomClicked, randomQuestions } = this.state;

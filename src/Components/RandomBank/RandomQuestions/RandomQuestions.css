@@ -26,8 +26,8 @@
 }
 
 .progress-bar-container {
-    width: 100%;
-    margin: 25% auto;
+    width: 80%;
+    margin: 10% auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
