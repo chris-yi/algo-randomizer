@@ -95,7 +95,7 @@ class App extends Component {
           instructions:
             'Write a function that accepts a string.  The function should capitalize the first letter of each word in the string then return the capitalized string.',
           image:
-            '',
+            'http://blog.writeathome.com/wp-content/uploads/2013/03/chalkboard_rules_caps-300x200.jpg',
           examples: [
             'capitalize("a short sentence") --> "A Short Sentence"',
             'capitalize("a lazy fox") --> "A Lazy Fox"',
@@ -107,7 +107,7 @@ class App extends Component {
           instructions:
             'Write a function that accepts a positive number N. The function should console log a step shape with N levels using the # character.  Make sure the step has spaces on the right hand side!',
           image:
-            '',
+            'https://securityintelligence.com/wp-content/uploads/2018/06/successbusinessconceptpe_574977-630x330.jpg',
           examples: [
             'steps(2)',
             '   "# " ',
