@@ -120,7 +120,58 @@ class App extends Component {
             '    "#   "',
             '    "##  "',
             '    "### "',
-            '    "####"',
+            '    "####"'
+          ]
+        },
+        {
+          name: 'Pyramid',
+          instructions:
+            'Write a function that accepts a positive number N. The function should console log a pyramid shape with N levels using the # character.  Make sure the pyramid has spaces on both the left *and* right hand sides',
+          image:
+            'https://hyperallergic.com/wp-content/uploads/2016/02/12555952_844385449003278_549523339_n.jpg',
+          examples: [
+            'pyramid(1)',
+            '"#"',
+            'pyramid(2)',
+            '" # "',
+            '"###"',
+            'pyramid(3)',
+            '"  #  "',
+            '" ### "',
+            '"#####"'
+          ]
+        },
+        {
+          name: 'Vowels',
+          instructions:
+            'Write a function that returns the number of vowels used in a string.  Vowels are the characters "a", "e" "i", "o", and "u".',
+          image:
+            'https://www.henbeastore.com/236-large_default/pre-writing-vowels.jpg',
+          examples: [
+            'vowels("Hi There!") --> 3',
+            'vowels("Why do you ask?") --> 4',
+            'vowels("Why?") --> 0'
+          ]
+        },
+        {
+          name: 'Spiral Matrix',
+          instructions:
+            'Write a function that accepts an integer N and returns a NxN spiral matrix.',
+          image:
+            'http://2.bp.blogspot.com/_vpX-AEPw2SY/TDWgsf65nsI/AAAAAAAAABI/i6_B8NzzAsU/s1600/spiral+matrix+3.bmp',
+          examples: [
+            'matrix(2)',
+            '[[1, 2]',
+            '[4, 3]]',
+            'matrix(3)',
+            '[[1, 2, 3]',
+            '[8, 9, 4]',
+            '[7, 6, 5]]',
+            'matrix(4)',
+            '[[1,   2,  3, 4]',
+            '[12, 13, 14, 5]',
+            '[11, 16, 15, 6]',
+            '[10,  9,  8, 7]]'
           ]
         }
       ],
