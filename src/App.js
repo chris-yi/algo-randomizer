@@ -173,7 +173,17 @@ class App extends Component {
             '[11, 16, 15, 6]',
             '[10,  9,  8, 7]]'
           ]
-        }
+        },
+        {
+          name: 'Fibonnaci',
+          instructions:
+            'Print out the n-th entry in the fibonacci series. The fibonacci series is an ordering of numbers where each number is the sum of the preceeding two. For example, the sequence [0, 1, 1, 2, 3, 5, 8, 13, 21, 34] forms the first ten entries of the fibonacci series.',
+          image:
+            'https://media.daysoftheyear.com/20171223112042/fibonacci-day1.jpg',
+          examples: [
+            'fib(4) === 3',
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
