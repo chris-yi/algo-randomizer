@@ -193,7 +193,17 @@ class App extends Component {
             'q.add(1);',
             'q.remove(); // returns 1;'
           ]
-        }
+        },
+        {
+          name: 'Queue Weave',
+          instructions:
+            '1) Complete the task in weave/queue.js 2) Implement the "weave" function.  Weave receives two queues as arguments and combines the contents of each into a new, third queue. The third queue should contain the *alterating* content of the two queues.  The function should handle queues of different lengths without inserting "undefined" into the new one. *Do not* access the array inside of any queue, only use the "add", "remove", and "peek" functions.',
+          image:
+            'https://smhttp-ssl-44887.nexcesscdn.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/a/sa-bsksohogryths.jpg',
+          examples: [
+            '',
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
