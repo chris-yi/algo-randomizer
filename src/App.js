@@ -204,6 +204,26 @@ class App extends Component {
             '',
           ]
         },
+        {
+          name: 'Stack',
+          instructions:
+            'Create a stack data structure.  The stack should be a class with methods "push", "pop", and "peek".  Adding an element to the stack should store it until it is removed.',
+          image:
+            'https://www.technologysolutions.net/wp-content/uploads/2017/09/use-case-graphic_full-stack-provisioning.png',
+          examples: [
+            '',
+          ]
+        },
+        {
+          name: 'Queue from Stack',
+          instructions:
+            'Implement a Queue datastructure using two stacks. *Do not* create an array inside of the "Queue" class. Queue should implement the methods "add", "remove", and "peek". For a reminder on what each method does, look back at the Queue exercise.',
+          image:
+            'https://is5-ssl.mzstatic.com/image/thumb/Purple69/v4/17/c0/f6/17c0f677-114e-87ff-72bd-69dc3e000bcb/mzl.psuvwams.jpg/246x0w.jpg',
+          examples: [
+            '',
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
