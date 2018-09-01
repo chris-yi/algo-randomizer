@@ -180,10 +180,20 @@ class App extends Component {
             'Print out the n-th entry in the fibonacci series. The fibonacci series is an ordering of numbers where each number is the sum of the preceeding two. For example, the sequence [0, 1, 1, 2, 3, 5, 8, 13, 21, 34] forms the first ten entries of the fibonacci series.',
           image:
             'https://media.daysoftheyear.com/20171223112042/fibonacci-day1.jpg',
-          examples: [
-            'fib(4) === 3',
-          ]
+          examples: ['fib(4) === 3']
         },
+        {
+          name: 'Queue',
+          instructions:
+            'Create a queue data structure.  The queue should be a class with methods "add" and "remove". Adding to the queue should store an element until it is removed',
+          image:
+            'https://stevejbicknell.files.wordpress.com/2013/01/fotolia_28865636_xs-queue.jpg',
+          examples: [
+            'const q = new Queue();',
+            'q.add(1);',
+            'q.remove(); // returns 1;'
+          ]
+        }
       ],
       randomQuestions: [],
       bankClicked: false,
