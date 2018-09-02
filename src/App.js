@@ -224,6 +224,16 @@ class App extends Component {
             '',
           ]
         },
+        {
+          name: 'Linked List',
+          instructions:
+            'Implement a Linked List',
+          image:
+            'https://cdn3.iconfinder.com/data/icons/web-and-internet-icons/512/Link-512.png',
+          examples: [
+            '',
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
