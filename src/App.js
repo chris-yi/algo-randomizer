@@ -231,7 +231,18 @@ class App extends Component {
           image:
             'https://cdn3.iconfinder.com/data/icons/web-and-internet-icons/512/Link-512.png',
           examples: [
-            '',
+            'insertFirst()',
+            'size()',
+            'getFirst()',
+            'getLast()',
+            'clear()',
+            'removeFirst()',
+            'removeLast()',
+            'insertLast',
+            'getAt()',
+            'removeAt()',
+            'insertAt()',
+            'forEach()',
           ]
         },
       ],
