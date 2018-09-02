@@ -245,6 +245,16 @@ class App extends Component {
             'forEach()',
           ]
         },
+        {
+          name: 'Midpoint Linked List',
+          instructions:
+            'Return the "middle" node of a linked list. If the list has an even number of elements, return the node at the end of the first half of the list. *Do not* use a counter variable, *do not* retrieve the size of the list, and only iterate through the list one time.',
+          image:
+            'https://c1.staticflickr.com/1/35/95137658_1404c284a8_b.jpg',
+          examples: [
+
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
