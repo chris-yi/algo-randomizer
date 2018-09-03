@@ -255,6 +255,16 @@ class App extends Component {
 
           ]
         },
+        {
+          name: 'Circular Linked List',
+          instructions:
+            'Given a linked list, return true if the list is circular, false if it is not.',
+          image:
+            'https://cdn.pixabay.com/photo/2016/03/29/20/31/circular-1289260_960_720.png',
+          examples: [
+
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
