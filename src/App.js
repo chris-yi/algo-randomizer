@@ -260,7 +260,17 @@ class App extends Component {
           instructions:
             'Given a linked list, return true if the list is circular, false if it is not.',
           image:
-            'https://cdn.pixabay.com/photo/2016/03/29/20/31/circular-1289260_960_720.png',
+            'https://blog.hubspot.com/hs-fs/hub/53/file-23117129-png/blog/images/closed-loop-marketing.png?t=1535641303031',
+          examples: [
+
+          ]
+        },
+        {
+          name: 'N from Last Linked List',
+          instructions:
+            'Given a linked list, return the element n spaces from the last node in the list.  Do not call the "size" method of the linked list.  Assume that n will always be less than the length of the list.',
+          image:
+            '',
           examples: [
 
           ]
