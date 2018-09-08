@@ -295,6 +295,36 @@ class App extends Component {
 
           ]
         },
+        {
+          name: 'Implement Bubble Sort',
+          instructions:
+            '',
+          image:
+            'https://cdn-images-1.medium.com/max/1386/1*zXKGjfhfBx-Jo4v0blt7zg.jpeg',
+          examples: [
+
+          ]
+        },
+        {
+          name: 'Implement a Selection Sort',
+          instructions:
+            '',
+          image:
+            'https://atmanco.com/wp-content/uploads/2015/11/employee-recruitment-and-selection.png',
+          examples: [
+
+          ]
+        },
+        {
+          name: 'Implement a Merge Sort',
+          instructions:
+            '',
+          image:
+            'https://vignette.wikia.nocookie.net/central/images/4/4f/500px-Merge_sign.svg.png/revision/latest?cb=20121024105541',
+          examples: [
+
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
