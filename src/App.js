@@ -337,6 +337,18 @@ class App extends Component {
             'same([1,2,1], [4,4,1]) // false (must be same frequency)'
           ]
         },
+        {
+          name: 'Sum Zero',
+          instructions:
+            'Write a function called sumZero which accepts a sorted array of integers. The function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist',
+          image:
+            'http://www.getcoloringpages.com/images/sm/smwbgc6.png',
+          examples: [
+            'sumZero([-3,-2,-1,0,1,2,3]) // [-3,3]',
+            'sumZero([-2,0,1,3]) // undefined',
+            'sumZero([1,2,3]) // undefined'
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
