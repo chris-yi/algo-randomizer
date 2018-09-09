@@ -401,6 +401,32 @@ class App extends Component {
             'areThereDuplicates("a", "b", "c", "d") // True',
           ]
         },
+        {
+          name: 'Average Pair',
+          instructions:
+            'Write a function called averagePair.  Given a sorted array of integers and a target average, determine if there is a piar of values in the array where the average of the pair equals the target average.  There may be more than one pair that matches the average target',
+          image:
+            'https://www.featurepics.com/StockImage/20070814/pear-pair-stock-photo-413291.jpg',
+          examples: [
+            'averagePair([1, 2, 3], 2.5) // True',
+            'averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8) // True',
+            'averagePair([-1, 0, 3, 4, 5, 6], 4.1) // False',
+            'averagePair([], 4) // False',
+          ]
+        },
+        {
+          name: 'Is Subsequence',
+          instructions:
+            'Write a function called isSubsequence which takes in two strings and checks whether the characters in the first string form a subsequence of the characters in the second string.  In other words, the function should check whether the characters in the first string appear somewhere in the second string, without their order changing',
+          image:
+            'https://images-na.ssl-images-amazon.com/images/I/51gFpuIyT8L.jpg',
+          examples: [
+            'isSubsequence("hello", "hello world") // True',
+            'isSubsequence("sing", "sting") // True',
+            'isSubsequence("abc", "abracadabra") // True',
+            'isSubsequence("abc", "acb") // false',
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
