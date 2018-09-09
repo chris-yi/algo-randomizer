@@ -376,6 +376,31 @@ class App extends Component {
             'maxSubarraySum([],4) // null'
           ]
         },
+        {
+          name: 'Same Frequency',
+          instructions:
+            'Write a function called sameFrequency.   Given two positive integers, find out if the two numbers have the same frequency of digits',
+          image:
+            'https://thefrequencydc.com/wp-content/uploads/Frequency-Logo-200-1.png',
+          examples: [
+            'sameFrequency(182, 281) // True',
+            'sameFrequency(34, 14) // False',
+            'sameFrequency(3589578, 5879385) // True',
+            'sameFrequency(22, 222) // False',
+          ]
+        },
+        {
+          name: 'Are There Duplicates?',
+          instructions:
+            'Implement a function called, areThereDuplicates which accepts a variable of arguments, and checks whether there are any duplicates among the arguments passed in',
+          image:
+            'https://www.vtexperts.com/wp-content/uploads/2016/07/duplicate-content.png',
+          examples: [
+            'areThereDuplicates(1, 2, 3) // False',
+            'areThereDuplicates(1, 2, 2) // True',
+            'areThereDuplicates("a", "b", "c", "d") // True',
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
