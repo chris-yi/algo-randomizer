@@ -449,6 +449,16 @@ class App extends Component {
             'Input: [4,1,2,1,2] //Output: 4',
           ]
         },
+        {
+          name: 'Move Zeroes (Leet Easy)',
+          instructions:
+            'Given an array nums, write a function to move all 0\'s to the end of it while maintaining the relative order of the non-zero elements.',
+          image:
+            'https://www.dhresource.com/0x0s/f2-albu-g4-M00-02-B0-rBVaEVc6A4WAKO2MAABbLb0HCNk479.jpg/move-zero-vol-1-by-john-bannon-and-big-blind.jpg',
+          examples: [
+            'Input: [0,1,0,3,12] //Output: [1,3,12,0,0]',
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
