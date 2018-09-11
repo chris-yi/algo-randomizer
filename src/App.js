@@ -438,6 +438,17 @@ class App extends Component {
             'Input: J = "z", S = "ZZ" //Output: 0',
           ]
         },
+        {
+          name: 'Single Number (Leet Easy)',
+          instructions:
+            'Given a non-empty array of integers, every element appears twice except for one. Find that single one. Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?',
+          image:
+            'https://www.seton.com/media/catalog/product/cache/4/image/85e4522595efc69f496374d01ef2bf13/1435184113/4/-/4-digit-blank-placards-46082-lg.png',
+          examples: [
+            'Input: [2,2,1] //Output: 1',
+            'Input: [4,1,2,1,2] //Output: 4',
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
