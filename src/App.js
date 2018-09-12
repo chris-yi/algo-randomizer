@@ -459,6 +459,30 @@ class App extends Component {
             'Input: [0,1,0,3,12] //Output: [1,3,12,0,0]',
           ]
         },
+        {
+          name: 'Majority Element (Leet Easy)',
+          instructions:
+            'Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times. You may assume that the array is non-empty and the majority element always exist in the array.',
+          image:
+            'https://electology.org/sites/default/files/plurality-majority.jpg',
+          examples: [
+            'Input: [3,2,3] //Output: 3',
+            'Input: [2,2,1,1,1,2,2] //Output: 2',
+          ]
+        },
+        {
+          name: 'Binary Search (Sorted Array)',
+          instructions:
+            'Write a function called binarySearch which accepts a sorted array and a value and returns the index at which the value exists.  Otherwise, return -1',
+          image:
+            'https://libertarianvindicator.files.wordpress.com/2018/02/divide-conquer.jpg?w=840',
+          examples: [
+            'binarySearch([1, 2, 3, 4, 5], 2) // 1',
+            'binarySearch([1, 2, 3, 4, 5], 3) // 2',
+            'binarySearch([1, 2, 3, 4, 5], 5) // 4',
+            'binarySearch([1, 2, 3, 4, 5], 6) // -1',
+          ]
+        },
       ],
       randomQuestions: [],
       bankClicked: false,
